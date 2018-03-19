@@ -3,4 +3,14 @@
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-115925165-1', 'none');</script><!-- End Google Analytics --><link href="styles.f013c48c1e2ab09f5c4e.bundle.css" rel="stylesheet"/></head><body><app-root></app-root><script type="text/javascript" src="inline.18eb566175ab497d907e.bundle.js"></script><script type="text/javascript" src="polyfills.f20484b2fa4642e0dca8.bundle.js"></script><script type="text/javascript" src="scripts.e2cc764d74d6cb8d1c42.bundle.js"></script><script type="text/javascript" src="main.e7fc9643c93194e033d6.bundle.js"></script></body></html>
+ga('create', 'UA-115925165-1', 'none');</script><!-- End Google Analytics --><!-- Github Pages hack to allow SPA refresh without receiving 404. --><script>(function () {
+      // Retrieve the URL the user was trying to access when receiving the 404.
+      var redirect = sessionStorage.redirect;
+      // Remove the URL from sessionStorage.
+      delete sessionStorage.redirect;
+      // Check if we actually need to redirect.
+      if (redirect && redirect != location.href) {
+        // We need to redirect to the URL the user was trying to access.
+        history.replaceState(null, null, redirect);
+      }
+    })();</script><!-- /Github Pages hack. --><link href="styles.f013c48c1e2ab09f5c4e.bundle.css" rel="stylesheet"/></head><body><app-root></app-root><script type="text/javascript" src="inline.18eb566175ab497d907e.bundle.js"></script><script type="text/javascript" src="polyfills.f20484b2fa4642e0dca8.bundle.js"></script><script type="text/javascript" src="scripts.e2cc764d74d6cb8d1c42.bundle.js"></script><script type="text/javascript" src="main.e7fc9643c93194e033d6.bundle.js"></script></body></html>
